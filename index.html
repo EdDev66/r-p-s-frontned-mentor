@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container d-flex flex-column justify-content-between">
+    <!-- Main section -->
+    <div class="w-100 text-white mt-5">
+      <div class="title-box row col-lg-6 offset-lg-3 p-3 d-flex">
+        <div class="col d-flex flex-column justify-content-center">
+          <h3 class="title-text">Rock</h3>
+          <h3 class="title-text">Paper</h3>
+          <h3 class="title-text">Scissors</h3>
+        </div>
+        <div class="col-3 text-center score-container py-2">
+          <p class="score">Score</p>
+          <h1 class="score-display">0</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game section -->
+    <div class="container game-section col-lg-6 offset-3 py-5 text-center text-white mx-auto">
+
+      <div class="option-select">
+        <div class="row">
+          <div class="col-6">
+              <img src="./images/icon-paper.svg" alt="" class="option-icon paper first-option">
+          </div>
+          <div class="col-6">
+              <img src="./images/icon-scissors.svg" alt="" class="option-icon scissors first-option">
+          </div>
+        </div>
+        <div class="col mt-4">
+            <img src="./images/icon-rock.svg" alt="" class="option-icon rock first-option">
+        </div>
+      </div>
+    </div>
+      <div class="game-started offset-lg-2">
+        <div class="row align-items-center game-row">
+          <div class="col-lg-4 col-6 text-center">
+            <h4 class="text-white mb-5 text-uppercase picked-text">You picked</h4>
+            <img src="./images/icon-rock.svg" alt="" class="option-icon player-option">
+          </div>
+          <div class="col-2 text-center text-white win-text-large">
+            <h1 class="win-text">You <span id="win">win</span></h1>
+            <div class="d-block play-again">Play again</div>
+          </div>
+          <div class="col-lg-4 col-6 text-center">
+            <h4 class="text-white mb-5 text-uppercase picked-text">The house picked</h4>
+            <img src="./images/icon-paper.svg" alt="" class="option-icon bot-option">
+          </div>
+          
+        </div>
+
+        <div class="col mt-4 text-center text-white win-text-mobile mx-auto">
+          <h1 class="win-text-small">You <span id="winSmall">win</span></h1>
+          <div class="play-again play-again-small">Play again</div>
+        </div>
+      </div>
+  </div>
+  <div class="rules-btn text-center" data-bs-toggle="modal" data-bs-target="#rulesModal">Rules</div>
+  </div>
+
+  <!-- Modal -->
+  <div class="rules-modal modal fade" id="rulesModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="rules-text">Rules</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="./images/image-rules.svg" alt="rules" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rules btn -->
+  <!-- <div class="rules-btn" data-bs-toggle="modal" data-bs-target="#rulesModal">Rules</div> -->
+
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
